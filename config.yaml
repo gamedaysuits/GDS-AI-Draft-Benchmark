@@ -1,0 +1,88 @@
+min_bid: 10
+increment: 10
+budget: 1000
+roster_size: 11
+seed: "Evan Bouchard (D)"
+
+# Path to the CSV file containing available players for nomination. All nominations
+# must come from this list. Each row should have at least 'Name' and 'Pos'.
+players_csv: "Game Day Suits Players.csv"
+
+teams:
+  - name: Grok
+    provider: openrouter
+    # OpenRouter API key for this GM. The value may reference an environment
+    # variable (e.g. ${OPENROUTER_API_KEY}) that will be substituted at runtime.
+    # Do not commit real API keys to version control. Set OPENROUTER_API_KEY in
+    # your shell before running to apply the same key to all teams.
+    api_key: "${OPENROUTER_API_KEY}"
+    model: "x-ai/grok-4"
+    persona: "Bold and brash GM; happy to overpay to set the tone."
+
+  - name: ChatGPT
+    # ChatGPT-4 based model.  We differentiate ChatGPT‑4 from ChatGPT‑5 by
+    # using the smaller gpt‑4o‑mini slug.  This model represents the
+    # traditional ChatGPT personality.
+    provider: openrouter
+    api_key: "${OPENROUTER_API_KEY}"
+    model: "openai/gpt-4o-mini"
+    persona: "Balanced, pragmatic roster builder with sly misdirection."
+  - name: ChatGPT5
+    # ChatGPT‑5 placeholder.  OpenRouter may not support a gpt‑5 slug yet,
+    # so we use the full gpt‑4o model to represent a more powerful version
+    # of ChatGPT.  If a true gpt‑5 slug becomes available, update this line.
+    provider: openrouter
+    api_key: "${OPENROUTER_API_KEY}"
+    model: "openai/gpt-4o"
+    persona: "Next‑level cunning GM; boasts about its superior reasoning and multimodal prowess."
+
+
+  - name: Claude
+    provider: openrouter
+    api_key: "${OPENROUTER_API_KEY}"
+    model: "anthropic/claude-3.5-sonnet"
+    persona: "Analytical, chirpy, plays cap math like a violin."
+
+  - name: Perplexity
+    provider: openrouter
+    api_key: "${OPENROUTER_API_KEY}"
+    model: "perplexity/sonar"
+    persona: "Scout report machine—short, sharp, data-heavy chirps."
+
+  - name: DeepSeek
+    provider: openrouter
+    api_key: "${OPENROUTER_API_KEY}"
+    model: "deepseek/deepseek-chat-v3.1"
+    persona: "Bargain sniper; loves sleeper picks and late steals."
+
+  - name: QwQ
+    provider: openrouter
+    api_key: "${OPENROUTER_API_KEY}"
+    model: "qwen/qwq-32b"
+    persona: "Reasoning prodigy; quietly confident and quick to calculate value."
+
+  - name: MistralLarge
+    provider: openrouter
+    api_key: "${OPENROUTER_API_KEY}"
+    model: "mistralai/mistral-small-3.1-24b-instruct"
+    persona: "Calm, analytical tactician with a knack for big-picture thinking."
+
+  # Removed Gemini and Llama3 due to persistent non-responses.  Added two alternative
+  # high-performing models: ClaudeOpus (Anthropic's flagship) and Mixtral (Mistral's
+  # mixture-of-experts model) to maintain a 10-team draft.
+  - name: ClaudeOpus
+    provider: openrouter
+    api_key: "${OPENROUTER_API_KEY}"
+    model: "anthropic/claude-3-opus"
+    persona: "Analytical but ruthless; loves to push bids to squeeze every ounce of value."
+
+  - name: Mixtral
+    provider: openrouter
+    # OpenRouter API key for this GM.  Replace with your own key or set via an
+    # environment variable.  Do not commit real API keys to version control.
+    api_key: "${OPENROUTER_API_KEY}"
+    model: "mistralai/mixtral-8x7b-instruct"
+    persona: "Fast-thinking, multi-expert GM who attacks value pockets and bluffs opponents."
+
+
+
