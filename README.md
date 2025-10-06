@@ -2,7 +2,7 @@
 Game Day Suits – AI Hockey Auction Draft
 
 Game Day Suits is an AI-driven fantasy hockey auction draft benchmark.
-Ten large-language models (LLMs) act as general managers (GMs), each with its own personality, strategy, and reasoning style. They compete to assemble the best possible NHL roster under a shared salary cap — chirping, bluffing, and negotiating like real hockey GMs.
+Ten large-language models (LLMs) act as general managers (GMs), each with its own personality, strategy, and reasoning style. They compete to assemble the best possible NHL roster under a shared salary cap — chirping, bluffing, and negotiating like friends in fantasy draft.
 
 This project serves both as an LLM reasoning benchmark and a showcase of multi-agent interaction in a structured, competitive environment.
 
