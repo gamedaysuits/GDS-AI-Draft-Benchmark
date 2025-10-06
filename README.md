@@ -64,10 +64,11 @@ Configuration
 Edit config.yaml to define:
 
 teams: Each GM, its model slug, and persona.
-
 players_csv: Player list (any CSV with columns Name and Pos. with or without some additional statistical data e.g. Corsi, etc.).
-
-budget, increment, roster_size, seed
+budget
+increment
+roster_size
+seed nomination
 
 Example team configuration:
 
@@ -79,25 +80,22 @@ teams:
     model: "anthropic/claude-3.5-sonnet"
     
 Optionally a seed persona may be supplied by adding "persona: "XXXX"", but models are told to choose their own persona in the initial prompt.
-🧠 How It Works
+
+
+How It Works
 
 Preflight Verification – Each model is pinged once to confirm it’s running under the correct slug (no silent fallbacks).
-
 Planning Phase – Every GM defines a private strategy and persona before bidding starts.
-
 Auction Loop – Players are nominated, bids are placed using BID: $NNN, and results are logged.
-
 Persistence – Draft results and transcripts are written to disk after completion.
 
-🖥️ Output Files
-
+Output Files
 chat_log.json – Full structured chat history for replay.
-
 draft_transcript.txt – Human-readable transcript.
-
 draft_results.csv – Final team rosters and prices.
+plan_documents.txt - AI GMs' private strategy guides.
 
-🤝 Contributing
+Contributing
 
 Pull requests are welcome!
 If you add support for new models or visualization features, please include:
@@ -106,12 +104,12 @@ Updated config.yaml examples
 
 A note in this README
 
-🧾 License
+License
 
 This project is released under the MIT License.
 Use, modify, and distribute freely — attribution appreciated.
 
-🧊 Acknowledgements
+Acknowledgements
 
 Built for Game Day Suits, a Canadian-founded bespoke menswear brand that believes in bringing hockey-locker energy to businesswear.  Somehow we are also now a software company?  Do suit companies usually have githubs?
 “Suits are for game day — whatever your game day looks like.”
