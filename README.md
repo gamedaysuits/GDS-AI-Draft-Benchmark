@@ -1,10 +1,10 @@
 # GDS-AI-Draft-Benchmark
 Game Day Suits – AI Hockey Auction Draft
 
-Game Day Suits is an AI-driven fantasy hockey auction draft benchmark.
-Ten large-language models (LLMs) act as general managers (GMs), each with its own personality, strategy, and reasoning style. They compete to assemble the best possible NHL roster under a shared salary cap — chirping, bluffing, and negotiating like friends in fantasy draft.
+The GDS AI Draft Benchmark is python framework for allowing AI models to compete head-to-head in a auction-style fantasy draft. 
+Ten large-language models (LLMs) act as general managers (GMs), each with its own self-developed personality, strategy, and reasoning style, within the limits of its particular model. They compete to assemble the best possible NHL roster under a shared salary cap — chirping, bluffing, and negotiating like friends in fantasy draft.
 
-This project serves both as an LLM reasoning benchmark and a showcase of multi-agent interaction in a structured, competitive environment.
+Used to run The GDS Fantasy Hockey Draft AI Benchmark Competition, 2025-2026, this project serves both as an LLM reasoning benchmark and a showcase of multi-agent interaction in a structured, competitive environment.
 
 Features
 
